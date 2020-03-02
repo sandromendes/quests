@@ -14,15 +14,20 @@ public class StackMainApp {
 		origin.push(3);
 		origin.push(12);
 		
-		System.out.println("Pilha original: " + origin);
+		//System.out.println("Pilha original: " + origin);
 		
-		Stack<Integer> swapSort = StackOrder.sortSwap(origin);
+		//Stack<Integer> swapSort = StackOrder.sortSwap(origin);
 		
-		System.out.println("Pilha ordenada por swap simples: " + swapSort);
+		//System.out.println("Pilha ordenada por swap simples: " + swapSort);
 		
-		Stack<Integer> hannoiSort = StackOrder.sortHannoi(origin);
+		Stack<Integer> hanoiEntry = new Stack<Integer>();
+		hanoiEntry.push(3);
+		hanoiEntry.push(2);
+		hanoiEntry.push(1);
 		
-		System.out.println("Pilha ordenada por Hannoi: " + hannoiSort);
+		Stack<Integer> hanoiReturn = HannoiPuzzle.move(hanoiEntry);
+		
+		System.out.println("Pilha ordenada por Hannoi: " + hanoiReturn);
 	}
 
 }
